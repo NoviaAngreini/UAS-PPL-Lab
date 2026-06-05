@@ -57,3 +57,23 @@ Fitur User (Publik)
 
 (CRUD: Create, Read, Update, Delete)
 
+# Teknologi
+Aplikasi Concert Ticket Hub dikembangkan menggunakan beberapa teknologi utama, yaitu:
+- Python
+- HTML dan CSS
+
+# Framework yang Digunakan
+Django Framework
+
+Django merupakan framework web berbasis Python yang digunakan untuk mempercepat proses pengembangan aplikasi. Django menyediakan berbagai fitur bawaan seperti sistem routing URL, manajemen database, autentikasi pengguna, serta panel administrasi (Admin Dashboard).
+
+# Arsitektur Sistem
+Aplikasi ini menggunakan arsitektur MVT (Model-View-Template) yang merupakan pola arsitektur bawaan Django.
+
+# Database yang Digunakan
+Aplikasi menggunakan SQLite3 sebagai sistem manajemen database. SQLite merupakan database bawaan Django yang ringan, mudah digunakan, dan tidak memerlukan instalasi server database tambahan.
+Database SQLite digunakan untuk menyimpan:
+- Data konser
+- Informasi tiket
+- Data pengguna/admin
+- Data autentikasi sistem
