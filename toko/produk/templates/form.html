@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tambah Konser</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        .navbar {
+            background: #0f172a;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #22c55e;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .form-card {
+            background: #1e293b;
+            width: 500px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .4);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .checkbox {
+            margin-top: 15px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background: #22c55e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #16a34a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">Concert Ticket Hub</div>
+    </div>
+
+    <div class="container">
+
+        <div class="form-card">
+
+            <h2>Tambah Konser</h2>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <label>Nama Konser</label>
+                <input type="text" name="nama_konser" required>
+
+                <label>Artis</label>
+                <input type="text" name="artis" required>
+
+                <label>Lokasi</label>
+                <input type="text" name="lokasi" required>
+
+                <label>Tanggal Konser</label>
+                <input type="date" name="tanggal" required>
+
+                <label>Harga Tiket</label>
+                <input type="number" name="harga_tiket" required>
+
+                <div class="checkbox">
+                    <input type="checkbox" name="tersedia">
+                    Tiket Tersedia
+                </div>
+
+                <button type="submit">
+                    Simpan Konser
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

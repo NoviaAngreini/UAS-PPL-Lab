@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Daftar Konser</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: white;
+        }
+
+        .navbar {
+            background: #0f172a;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #22c55e;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            color: #22c55e;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 42px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        .konser-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+
+        .card {
+            background: #1e293b;
+            width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .nama {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            color: #cbd5e1;
+            margin-bottom: 8px;
+        }
+
+        .harga {
+            font-size: 20px;
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            background: #22c55e;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            background: #16a34a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">Concert Ticket Hub</div>
+
+        <div class="menu">
+            <a href="/">Home</a>
+            <a href="/konser/">Konser</a>
+            <a href="/kontak/">Kontak</a>
+        </div>
+    </div>
+
+    <h1 class="title">Daftar Konser</h1>
+    <p class="subtitle">Temukan konser favoritmu dan pesan tiket sekarang</p>
+
+    <div class="konser-container">
+
+        {% for konser in konser_list %}
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <div class="nama">
+                    {{ konser.nama_konser }}
+                </div>
+
+                <div class="info">
+                    🎤 {{ konser.artis }}
+                </div>
+
+                <div class="info">
+                    📍 {{ konser.lokasi }}
+                </div>
+
+                <div class="info">
+                    📅 {{ konser.tanggal }}
+                </div>
+
+                <div class="harga">
+                    Rp {{ konser.harga_tiket }}
+                </div>
+
+                <a href="/konser/{{ konser.id }}/" class="btn">
+                    Lihat Detail
+                </a>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <h3>Belum ada konser tersedia.</h3>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+
+</html>
