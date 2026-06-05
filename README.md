@@ -4,7 +4,7 @@ Nama: Novia Angreini
 
 NPM: 2208107010068
 
-# Struktur Fodler
+# Struktur Folder
 ```
 toko/
 │
