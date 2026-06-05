@@ -1,1 +1,58 @@
-# UAS-PPL-Lab
+# UAS Praktikum Proyek Perangkat Lunak
+
+Nama: Novia Angreini
+NPM: 2208107010068
+
+# Struktur Fodler
+```
+toko/
+│
+├── manage.py
+│
+├── toko/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+│
+├── produk/
+│   ├── migrations/
+│   ├── templates/
+│   │   ├── home.html
+│   │   ├── daftar_konser.html
+│   │   ├── detail_konser.html
+│   │   ├── kontak.html
+│   │   ├── list.html
+│   │   └── form.html
+│   │
+│   ├── admin.py
+│   ├── models.py
+│   ├── urls.py
+│   └── views.py
+│
+└── db.sqlite3
+```
+
+# Fitur Utama
+Fitur User (Publik)
+1. Halaman Home
+   - Menampilkan informasi aplikasi penjualan tiket konser.
+   - Menampilkan daftar konser yang tersedia.
+2. Halaman Daftar Konser
+   - Menampilkan seluruh konser yang tersedia.
+   - Menampilkan nama konser, artis, lokasi, tanggal, dan harga tiket.
+3. Halaman Detail Konser
+   - Menampilkan informasi lengkap konser.
+   - Menampilkan status tiket tersedia atau sold out.
+4. Halaman Kontak
+   - Menampilkan informasi kontak penyelenggara.
+
+# Fitur Admin
+- Login Admin Django
+- Tambah Data Konser
+- Melihat Data Konser
+- Mengubah Data Konser
+- Menghapus Data Konser
+
+(CRUD: Create, Read, Update, Delete)
+
